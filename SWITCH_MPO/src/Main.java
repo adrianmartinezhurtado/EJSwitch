@@ -6,6 +6,9 @@ public class Main {
         Switch variableEjercicios = new Switch();
 
         //variableEjercicios.Ejercicio1();
-        variableEjercicios.Ejercicio2();
+        //variableEjercicios.Ejercicio2();
+        //variableEjercicios.Ejercicio3();
+        variableEjercicios.Ejercicio6();
+
     }
 }
