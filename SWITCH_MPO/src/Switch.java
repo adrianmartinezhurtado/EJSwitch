@@ -160,7 +160,8 @@ Considera: 9-10 = A, 7-8.9 = B, 5-6.9 = C, 4-4.9 = D, 0-3.9 = F
 
         scanner.close();
     }
-    public void Ejercicio6(){
+
+    public void Ejercicio6() {
         /*
         **Objetivo:** Crear un programa que genere saludos diferentes según la hora del día.
 
@@ -215,5 +216,105 @@ Considera: 9-10 = A, 7-8.9 = B, 5-6.9 = C, 4-4.9 = D, 0-3.9 = F
         }
     }
 
+    public void Ejercicio7() {
+        /*
+        **Objetivo:** Crear un sistema que determine el nivel del jugador según su puntuación.
+
+**Requisitos:**
+
+1. Declara una variable `int puntuacion`.
+2. Usa `switch(true)` para clasificar en niveles:
+* Principiante (0-100), Intermedio (101-500), Avanzado (501-1000), Experto (1001-5000), Maestro (>5000).
+3. Muestra el nivel alcanzado y un mensaje motivacional.
+4. Otorga una recompensa virtual diferente para cada nivel.
+         */
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce tu puntuación:");
+        int puntuacion = scanner.nextInt();
+
+        if (puntuacion >= 0 && puntuacion <= 100) {
+            System.out.println("Nivel: Principiante");
+            System.out.println("¡Sigue mejorando, vas por buen camino!");
+            System.out.println("Has ganado: [Poción de curación básica]");
+
+        } else if (puntuacion >= 101 && puntuacion <= 500) {
+            System.out.println("Nivel: Intermedio");
+            System.out.println("¡Buen trabajo! Ya dominas lo básico.");
+            System.out.println("Has ganado: [Espada de aprendiz]");
+
+        } else if (puntuacion >= 501 && puntuacion <= 1000) {
+            System.out.println("Nivel: Avanzado");
+            System.out.println("¡Tu habilidad es impresionante!");
+            System.out.println("Has ganado: [Armadura de caballero]");
+
+        } else if (puntuacion >= 1001 && puntuacion <= 5000) {
+            System.out.println("Nivel: Experto");
+            System.out.println("Pocos jugadores llegan tan lejos.");
+            System.out.println("Has ganado: [Báculo de mago experto]");
+
+        } else if (puntuacion > 5000) {
+            System.out.println("Nivel: Maestro");
+            System.out.println("¡Eres una leyenda del juego!");
+            System.out.println("Has ganado: [La corona del Rey Dragón]");
+
+        } else {
+            // Esto cubre las puntuaciones negativas
+            System.out.println("Puntuación no válida.");
+        }
+
+
+        scanner.close();
     }
+
+    public void Ejercicio8() {
+        /*
+        **Objetivo:** Crear un programa que identifique el tipo de archivo según su extensión.
+
+**Requisitos:**
+
+1. Declara una variable `String extension` (por ejemplo: "jpg", "pdf", "txt", "mp3").
+2. Usa un `switch` para agrupar extensiones similares:
+* Imágenes (jpg, png, gif), Documentos (pdf, doc, txt), Audio (mp3, wav), Video (mp4, avi).
+3. Muestra el tipo de archivo y el programa recomendado para abrirlo.
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce el tipo de archivo que quieres abrir:");
+        String extension = scanner.nextLine();
+        switch (extension) {
+            case "jpg":
+            case "png":
+            case "gif":
+                System.out.println("Tipo: Archivo de imagen");
+                System.out.println("Programa recomendado: Adobe o Gimp");
+                break;
+            case "pdf":
+            case "doc":
+            case "txt":
+                System.out.println("Tipo: Documento de Texto");
+                System.out.println("Programa recomendado: Microsoft Word o Adobe Acrobat Reader");
+                break;
+            case "mp3":
+            case "wav":
+                System.out.println("Tipo: Archivo de Audio");
+                System.out.println("Programa recomendado: Spotify");
+                break;
+            case "mp4":
+            case "avi":
+            case "mov":
+                System.out.println("Tipo: Archivo de Video");
+                System.out.println("Programa recomendado: VLC Media Player");
+                break;
+
+            default:
+                System.out.println("Tipo: Extensión desconocida o no soportada.");
+                System.out.println("Programa recomendado: Desconocido.");
+                break;
+        }
+        scanner.close();
+    }
+}
+    }
+
+
 

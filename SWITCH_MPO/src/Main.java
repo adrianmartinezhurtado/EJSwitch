@@ -8,7 +8,9 @@ public class Main {
         //variableEjercicios.Ejercicio1();
         //variableEjercicios.Ejercicio2();
         //variableEjercicios.Ejercicio3();
-        variableEjercicios.Ejercicio6();
+        //variableEjercicios.Ejercicio6();
+        //variableEjercicios.Ejercicio7();
+        variableEjercicios.Ejercicio8();
 
     }
 }
